@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@import "@catppuccin/tailwindcss/mocha.css";
+
+body {
+  @apply bg-ctp-base text-ctp-text
+}
+
+a {
+  @apply hover:text-ctp-blue
+}
