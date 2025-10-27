@@ -1,10 +1,56 @@
 @import 'tailwindcss';
-@import "@catppuccin/tailwindcss/mocha.css";
+@plugin '@tailwindcss/typography';
+@import '@catppuccin/tailwindcss/mocha.css';
+
+html {
+  @apply scroll-smooth scroll-pt-32
+}
 
 body {
   @apply bg-ctp-base text-ctp-text
 }
 
-a {
-  @apply hover:text-ctp-blue
+
+.img-full {
+  @apply [&_img]:w-full
+}
+
+@utility prose {
+  a {
+    @apply hover:text-ctp-blue hover:underline no-underline
+  }
+
+  code {
+    @apply bg-ctp-mantle px-2 py-1 rounded-lg;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  img {
+    @apply rounded-xl
+  }
+
+  kbd {
+    @apply bg-ctp-mantle text-ctp-text
+  }
+
+  --tw-prose-body: var(--color-ctp-text);
+  --tw-prose-headings: var(--color-ctp-blue);
+  --tw-prose-lead: var(--color-ctp-text);
+  --tw-prose-links: var(--color-ctp-blue);
+  --tw-prose-bold: var(--color-ctp-text);
+  --tw-prose-counters: var(--color-ctp-blue);
+  --tw-prose-bullets: var(--color-ctp-blue);
+  --tw-prose-hr: var(--color-ctp-blue);
+  --tw-prose-quotes: var(--color-ctp-text);
+  --tw-prose-quote-borders: var(--color-ctp-blue);
+  --tw-prose-captions: var(--color-ctp-text);
+  --tw-prose-code: var(--color-ctp-mauve);
+  --tw-prose-pre-code: var(--color-ctp-mauve);
+  --tw-prose-pre-bg: var(--color-ctp-mantle);
+  --tw-prose-th-borders: var(--color-ctp-text);
+  --tw-prose-td-borders: var(--color-ctp-text);
 }

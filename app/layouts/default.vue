@@ -1,33 +1,46 @@
 <script setup lang="ts">
+const route = useRoute()
+
 const isDark = useDark({
-  valueDark: "mocha",
-  valueLight: "latte",
+  valueDark: "dark mocha",
+  valueLight: "light latte",
 })
 const toggleDark = useToggle(isDark)
+const { y } = useWindowScroll()
 </script>
 <template>
-  <div class="flex flex-col min-h-screen">
-    <nav
-      class="sticky flex top-0 justify-between p-6 px-48 [&_a]:flex [&_a]:items-center [&_a]:gap-1 [&_a]:p-2 border-b border-b-ctp-surface0">
-      <NuxtLink to="/">Home</NuxtLink>
-      <div class="flex gap-4">
-        <NuxtLink to="/portfolio">
+  <NuxtLoadingIndicator :color="isDark ? '#cba6f7' : '#8839ef'" />
+  <div class="flex flex-col min-h-dvh relative">
+    <nav class="bg-ctp-base sticky flex top-0 justify-between p-4 lg:px-48 [&_a]:flex
+      [&_a]:items-center [&_a]:gap-1 [&_a]:p-2 border-b border-b-ctp-surface0
+      z-50 **:transition-all **:duration-300">
+      <NuxtLink to="/" class="hover:text-ctp-blue">Home</NuxtLink>
+      <div class="flex">
+        <NuxtLink to="/portfolio" class="hover:text-ctp-blue"
+          :class="route.name === 'portfolio' ? 'text-ctp-blue' : ''">
           <Icon name="fluent:toolbox-28-regular" />Portofolio
-          <span class="absolute border-ctp-blue-400 w-full bottom-0"></span>
         </NuxtLink>
-        <NuxtLink to="/article">
+        <NuxtLink to="/articles" class="hover:text-ctp-blue" :class="route.name === 'articles' ? 'text-ctp-blue' : ''">
           <Icon name="fluent:news-28-regular" />Artikel
         </NuxtLink>
-        <button @click="toggleDark()" class="flex items-center p-2 cursor-pointer hover:text-ctp-blue text-xl">
-          <Icon name="mingcute:sun-line" v-if="isDark" />
-          <Icon name="mingcute:moon-line" v-else />
+        <button class="flex items-center p-2 cursor-pointer hover:text-ctp-blue text-xl" @click="toggleDark()">
+          <ClientOnly>
+            <Icon :name="isDark ? 'mingcute:sun-line' : 'mingcute:moon-line'" />
+          </ClientOnly>
         </button>
       </div>
     </nav>
-    <main class="grow w-[45rem] mx-auto flex [&>*]:w-full [&>*]:p-4">
+    <div v-if="route.path.includes('articles')"
+      class="pointer-events-none absolute h-[calc(100%-120dvh)] bottom-4 right-4 z-40">
+      <div @click="y = 0"
+        class="sticky top-[calc(100dvh-4rem)] bg-ctp-mantle rounded-full size-12 flex items-center justify-center cursor-pointer pointer-events-auto">
+        <Icon name="mingcute:arrow-up-fill" size="2rem" />
+      </div>
+    </div>
+    <main class="grow flex p-4 lg:max-w-[64rem] lg:mx-auto w-full">
       <slot />
     </main>
-    <footer class=" w-[45rem] mx-auto p-4">
+    <footer class="min-w-96 lg:w-[64rem] mx-auto p-4">
       <p class="text-xs text-ctp-subtext0">
         &copy; {{ new Date().getFullYear() }} Danial.
       </p>
