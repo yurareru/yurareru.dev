@@ -3,6 +3,7 @@ import type { PostCollectionItem } from '@nuxt/content';
 
 const { post } = defineProps<{
   post: PostCollectionItem | null | undefined
+  previousPathTitle: string,
   previousPath: string
 }>()
 
@@ -18,8 +19,9 @@ useSeoMeta({
 })
 </script>
 <template>
-  <article class="prose max-w-none" :class="post.class">
-    <NuxtLink to="/articles" class="text-ctp-subtext0">{{ previousPath }}</NuxtLink><span class="text-ctp-mauve">
+  <article class="prose lg:prose-lg max-w-none" :class="post.class">
+    <NuxtLink :to="previousPath" class="text-ctp-subtext0">{{ previousPathTitle }}</NuxtLink><span
+      class="text-ctp-mauve">
       /</span>
     <h1 class="text-5xl">{{ post.title }}</h1>
     <ContentRenderer :value="post" />
