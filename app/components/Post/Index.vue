@@ -12,6 +12,7 @@ if (!post) {
     statusCode: 404,
   })
 }
+
 useSeoMeta({
   title: post.title,
   ogTitle: post.title,

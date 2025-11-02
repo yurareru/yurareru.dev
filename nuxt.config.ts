@@ -10,6 +10,14 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/content',
   ],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'id',
+      },
+      link: [{ rel: 'icon', type: 'image/png', href: '/assets/favicon.png' }],
+    },
+  },
   hooks: {
     'content:file:afterParse'(ctx) {
       const { file, content } = ctx
@@ -25,6 +33,19 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
+  },
+  image: {
+    vercel: {
+      formats: ['image/webp'],
+    },
+  },
+  icon: {
+    customCollections: [
+      {
+        prefix: 'local',
+        dir: './app/assets/local',
+      },
+    ],
   },
   content: {
     build: {

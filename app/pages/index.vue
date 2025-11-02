@@ -2,12 +2,12 @@
 </script>
 <template>
   <div class="flex items-center justify-center flex-col w-full">
-    <NuxtImg format="webp" src="/assets/profile.webp" class="w-40 rounded-full" placeholder alt="profile" />
-    <h1 class="font-bold text-4xl my-2 text-ctp-blue">Danial Al Hasya Ananto</h1>
-    <p class="text-center text-ctp-subtext1 text-lg max-w-[32rem]">Pelajar di MAN 1 Jepara yang aktif dalam
+    <NuxtImg format="webp" src="/assets/profile.webp" class="w-40 rounded-full" placeholder alt="profile" preload />
+    <h1 class="text-center font-bold text-4xl my-2 text-ctp-blue">Danial Al Hasya Ananto</h1>
+    <p class="text-center text-ctp-subtext1 max-w-[32rem] lg:text-lg">Pelajar di MAN 1 Jepara yang aktif dalam
       berkompetisi di bidang Informatika dan Matematika.
     </p>
-    <ul class="text-lg text-ctp-subtext0 pr-20 my-4">
+    <ul class="text-ctp-subtext0 my-4 lg:text-lg">
       <li>
         <Icon name="twemoji:2nd-place-medal" alt="2" /> OSN-K Jepara 2024 Bidang Informatika
       </li>

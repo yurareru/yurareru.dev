@@ -3,7 +3,7 @@
 @import '@catppuccin/tailwindcss/mocha.css';
 
 html {
-  @apply scroll-smooth scroll-pt-32
+  @apply scroll-smooth scroll-pt-20
 }
 
 body {
@@ -13,6 +13,10 @@ body {
 
 .img-full {
   @apply [&_img]:w-full
+}
+
+.MathJax {
+  @apply inline-flex align-middle max-w-[calc(100vw-2rem)]
 }
 
 @utility prose {
@@ -35,6 +39,10 @@ body {
 
   kbd {
     @apply bg-ctp-mantle text-ctp-text
+  }
+
+  li {
+    @apply pl-0
   }
 
   --tw-prose-body: var(--color-ctp-text);
