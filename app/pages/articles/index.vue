@@ -8,15 +8,15 @@ const { data: posts } = await useAsyncData('posts', () => {
 })
 
 useSeoMeta({
-  title: 'Artikel-artikel',
-  ogTitle: 'Artikel-artikel',
-  description: 'Artikel-artikel yang ditulis ketika gabut.',
-  ogDescription: 'Artikel-artikel yang ditulis ketika gabut.'
+  title: 'Artikel–artikel',
+  ogTitle: 'Artikel–artikel',
+  description: 'Artikel–artikel yang ditulis ketika gabut.',
+  ogDescription: 'Artikel–artikel yang ditulis ketika gabut.'
 })
 </script>
 <template>
   <section>
-    <h1 class="text-4xl text-ctp-blue font-bold mb-4">Artikel-artikel</h1>
+    <h1 class="text-4xl text-ctp-blue font-bold mb-4">Artikel&ndash;artikel</h1>
     <PostCollection :posts />
   </section>
 </template>

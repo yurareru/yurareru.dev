@@ -43,8 +43,10 @@ type: article
         - $a + b = b + a$
         - $a \times b = b \times a$
     - **Asosiatif (kelompok)**
+
         $(a+b)+c = a+(b+c)$
     - **Distributif (sebar)**
+
         $a \times (b+c) = (a \times b) + (a \times c)$
 
 ### KPK, FPB dan Aplikasinya

@@ -12,13 +12,14 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/content": "^3.7.1",
-    "@nuxt/eslint": "^1.9.0",
+    "@nuxt/content": "^3.8.0",
+    "@nuxt/eslint": "^1.10.0",
     "@nuxt/icon": "^2.1.0",
     "@tailwindcss/vite": "^4.1.16",
-    "@vueuse/nuxt": "13.9.0",
-    "eslint": "^9.38.0",
-    "nuxt": "^4.1.3",
+    "@vueuse/nuxt": "^14.0.0",
+    "eslint": "^9.39.0",
+    "fuse.js": "^7.1.0",
+    "nuxt": "^4.2.0",
     "rehype-mathjax": "^7.1.0",
     "remark-math": "^6.0.0",
     "sharp": "0.33.4",
@@ -28,7 +29,7 @@
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^1.0.0",
-    "@iconify-json/fluent": "^1.2.33",
+    "@iconify-json/fluent": "^1.2.34",
     "@iconify-json/mingcute": "^1.2.5",
     "@iconify-json/twemoji": "^1.2.4",
     "@nuxt/image": "^1.11.0",
@@ -37,8 +38,7 @@
   },
   "pnpm": {
     "overrides": {
-      "sharp": "0.33.4",
-      "@vueuse/nuxt": "13.9.0"
+      "sharp": "0.33.4"
     }
   }
 }

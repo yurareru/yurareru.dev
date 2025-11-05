@@ -7,5 +7,5 @@ const { data: post } = await useAsyncData(`articles-${slug}`, () => {
 </script>
 
 <template>
-  <Post :post previous-path-title="Artikel-artikel" previous-path="/articles" />
+  <Post :post previous-path-title="Artikel&ndash;artikel" previous-path="/articles" />
 </template>

@@ -1,5 +1,3 @@
-<script setup lang="ts">
-</script>
 <template>
   <div class="flex items-center justify-center flex-col w-full">
     <NuxtImg format="webp" src="/assets/profile.webp" class="w-40 rounded-full" placeholder alt="profile" preload />

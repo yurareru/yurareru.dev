@@ -25,9 +25,9 @@ const formatDate = (date: string) => {
       <div class="flex flex-wrap grow px-2">
         <div class="text-[0.9rem]">
           <span class="text-ctp-subtext1">{{ formatDate(post.date) }}</span>
-          <span class="text-ctp-blue mx-1">•</span>
+          <span class="text-ctp-mauve mx-1">•</span>
           <span class="text-ctp-subtext1">{{ post.wordCount }} kata</span>
-          <span class="text-ctp-blue mx-1">•</span>
+          <span class="text-ctp-mauve mx-1">•</span>
           <span class="text-ctp-subtext1">~{{ post.readingTime }} menit</span>
         </div>
       </div>

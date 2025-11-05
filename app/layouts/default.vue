@@ -7,9 +7,19 @@ const isDark = useDark({
 })
 const toggleDark = useToggle(isDark)
 const { y } = useWindowScroll()
+
+const [searchIsOpen, toggleSearch] = useToggle(false)
+
+const mounted = ref(false)
+onMounted(() => mounted.value = true)
 </script>
 <template>
   <div class="flex flex-col min-h-dvh relative">
+    <Teleport to="#teleports">
+      <Transition name="fade">
+        <SearchModal v-if="searchIsOpen" @close="toggleSearch" />
+      </Transition>
+    </Teleport>
     <ClientOnly>
       <NuxtLoadingIndicator :color="isDark ? '#cba6f7' : '#8839ef'" />
     </ClientOnly>
@@ -27,10 +37,12 @@ const { y } = useWindowScroll()
         <NuxtLink to="/articles" class="hover:text-ctp-blue" :class="route.name === 'articles' ? 'text-ctp-blue' : ''">
           <Icon name="fluent:news-28-regular" />Artikel
         </NuxtLink>
-        <button class="flex items-center p-2 cursor-pointer hover:text-ctp-blue text-xl" @click="toggleDark()">
-          <ClientOnly fallback-tag="span">
-            <Icon :name="isDark ? 'mingcute:sun-line' : 'mingcute:moon-line'" />
-          </ClientOnly>
+        <button class="cursor-pointer hover:text-ctp-blue text-xl flex items-center p-2" @click="toggleSearch()">
+          <Icon name="mingcute:search-2-line" class="align-middle" />
+        </button>
+        <button class="cursor-pointer hover:text-ctp-blue text-xl flex items-center p-2" @click="toggleDark()">
+          <Icon v-if="mounted" :name="isDark ? 'mingcute:sun-line' : 'mingcute:moon-line'" />
+          <Icon v-else name="mingcute:sun-line" />
         </button>
       </div>
     </nav>
@@ -52,3 +64,14 @@ const { y } = useWindowScroll()
     </footer>
   </div>
 </template>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
