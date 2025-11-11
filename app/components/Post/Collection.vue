@@ -16,19 +16,19 @@ const formatDate = (date: string) => {
 <template>
   <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
     <div v-for="post in posts" :key="post.path" @click="useRouter().push(post.path)"
-      class="bg-ctp-mantle rounded-xl cursor-pointer flex flex-col h-72 overflow-hidden">
+      class="bg-base-200 rounded-xl cursor-pointer flex flex-col h-72 overflow-hidden">
       <NuxtLink :to="post.path" class="h-32 overflow-hidden">
         <NuxtImg :src="`${post.path}/thumbnail.jpg`" :placeholder="[720, 480, 5, 5]" format="webp"
           class="bg-cover bg-center w-full" />
       </NuxtLink>
-      <NuxtLink :to="post.path" class="text-ctp-blue text-xl font-bold p-2">{{ post.title }}</NuxtLink>
+      <NuxtLink :to="post.path" class="text-primary text-xl font-bold p-2">{{ post.title }}</NuxtLink>
       <div class="flex flex-wrap grow px-2">
         <div class="text-[0.9rem]">
-          <span class="text-ctp-subtext1">{{ formatDate(post.date) }}</span>
-          <span class="text-ctp-mauve mx-1">•</span>
-          <span class="text-ctp-subtext1">{{ post.wordCount }} kata</span>
-          <span class="text-ctp-mauve mx-1">•</span>
-          <span class="text-ctp-subtext1">~{{ post.readingTime }} menit</span>
+          <span>{{ formatDate(post.date) }}</span>
+          <span class="text-accent mx-1">•</span>
+          <span>{{ post.wordCount }} kata</span>
+          <span class="text-accent mx-1">•</span>
+          <span>~{{ post.readingTime }} menit</span>
         </div>
       </div>
       <div class="flex p-4 justify-end">

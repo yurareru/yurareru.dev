@@ -7,7 +7,11 @@ useSeoMeta({
 })
 </script>
 <template>
-  <div>
-    To be added.
+  <div class="hero">
+    <div class="hero-content">
+      <div class="alert alert-info">
+        <Icon name="twemoji:construction" /> Akan ditambahkan.
+      </div>
+    </div>
   </div>
 </template>
