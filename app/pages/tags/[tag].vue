@@ -20,9 +20,9 @@ useSeoMeta({
 </script>
 <template>
   <section>
-    <NuxtLink to="/tags" class="text-ctp-subtext0">Label&ndash;label</NuxtLink><span class="text-ctp-mauve">
+    <NuxtLink to="/tags" class="text-neutral">Label&ndash;label</NuxtLink><span class="text-accent">
       /</span>
-    <h1 class="text-4xl text-ctp-blue font-bold mb-4">{{ tag }}</h1>
+    <h1 class="text-4xl text-primary font-bold mb-4">{{ tag }}</h1>
     <PostCollection :posts />
   </section>
 </template>

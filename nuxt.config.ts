@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/image',
     '@nuxt/content',
+    '@nuxtjs/color-mode',
   ],
   app: {
     head: {
@@ -33,6 +34,11 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
+  },
+  colorMode: {
+    preference: 'system',
+    fallback: 'latte',
+    dataValue: 'theme',
   },
   image: {
     vercel: {

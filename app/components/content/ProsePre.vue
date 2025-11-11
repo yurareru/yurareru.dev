@@ -28,15 +28,16 @@ const props = defineProps({
 const { copy, copied, isSupported } = useClipboard()
 </script>
 <template>
-  <div class="bg-ctp-mantle rounded-xl mb-8 relative max-w-[calc(100vw-2rem)]">
-    <!-- <code class="absolute text-xl m-4 text-ctp-text">{{ props.language }}</code> -->
-    <div v-if="isSupported" class="sticky top-24 flex p-4 justify-end">
-      <Icon @click="copy(props.code)" name="mingcute:clipboard-line" class="text-2xl hover:text-ctp-blue cursor-pointer"
-        :class="!copied ? 'text-ctp-text' : 'text-ctp-green'" />
-    </div>
-    <pre :class="props.class" class="not-prose overflow-scroll px-4 text-xs lg:text-base">
+  <div class="bg-base-200 flex rounded-xl max-w-[calc(100vw-2rem)] relative">
+    <pre :class="props.class" class="not-prose grow px-4 overflow-x-scroll text-sm">
       <slot />
     </pre>
+    <div v-if="isSupported" class="absolute right-0 h-full pointer-events-none p-1">
+      <div @click="copy(props.code)" class="sticky top-20 btn btn-circle pointer-events-auto"
+        :class="!copied ? '' : 'btn-success'">
+        <Icon name="mingcute:clipboard-line" size="24" />
+      </div>
+    </div>
   </div>
 </template>
 <style>
