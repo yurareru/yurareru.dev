@@ -34,6 +34,13 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        'fuse.js',
+        'rehype-mathjax',
+        'remark-math',
+      ]
+    }
   },
   colorMode: {
     preference: 'system',
@@ -71,9 +78,6 @@ export default defineNuxtConfig({
           langs: ['bash', 'cpp'],
         },
       },
-    },
-    experimental: {
-      nativeSqlite: true,
     },
   },
 })

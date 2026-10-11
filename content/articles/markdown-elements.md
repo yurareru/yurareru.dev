@@ -1,7 +1,7 @@
 ---
 title: "Markdown Elements"
 date: "2025-10-25"
-type: article
+# type: article
 tags:
   - typography
   - placeholder
