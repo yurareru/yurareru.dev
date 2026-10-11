@@ -33,12 +33,12 @@ onMounted(() => {
 <template>
   <nav class="navbar sticky top-0 bg-base-100 border-b border-secondary z-50">
     <div class="navbar-start">
-      <NuxtLink to="/" class="btn btn-ghost text-primary">
+      <NuxtLink to="/" class="btn btn-ghost text-primary" ariaCurrentValue="false">
         <Icon name="local:logo" />
       </NuxtLink>
     </div>
-    <div class="navbar-end">
-      <div class="hidden lg:flex">
+    <div class="navbar-end gap-2">
+      <div class="hidden lg:flex gap-2">
         <NuxtLink to="/portfolio" class="btn btn-ghost">
           <Icon name="fluent:toolbox-32-regular" size="24" />
           Portofolio

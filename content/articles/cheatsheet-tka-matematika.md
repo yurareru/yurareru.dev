@@ -14,7 +14,7 @@ type: article
 
         $\left\{1, 2, 3, \dots\right\}$
 
-    - **Cacah** ($\mathbb{W}$)
+    - **Cacah** ($\mathbb{N}_0$)
 
         $\left\{0, 1, 2, \dots\right\}$
 

@@ -3,8 +3,8 @@
     <div class="hero-content flex-col gap-0">
       <NuxtImg format="webp" src="/assets/profile.webp" class="w-40 rounded-full" placeholder alt="profile" preload />
       <h1 class="text-center font-bold text-4xl my-2 text-primary">Danial Al Hasya Ananto</h1>
-      <p class="text-center text-ctp-subtext1 max-w-lg lg:text-lg">Pelajar di MAN 1 Jepara yang aktif dalam
-        berkompetisi di bidang Informatika dan Matematika.
+      <p class="text-center text-ctp-subtext1 max-w-lg lg:text-lg">Mahasiswa S1 Informatika Telkom University yang
+        menyukai matematika dan informatika
       </p>
       <ul class="text-neutral my-4 lg:text-lg">
         <li>
@@ -24,7 +24,7 @@
         <NuxtLink to="https://www.linkedin.com/in/yurareru/" target="_blank" alt="LinkedIn">
           <Icon name="mingcute:linkedin-line" size="24" />
         </NuxtLink>
-        <NuxtLink to="mailto:danialananto@protonmail.com" target="_blank" alt="Email">
+        <NuxtLink to="mailto:danialananto@pm.com" target="_blank" alt="Email">
           <Icon name="mingcute:mail-line" size="24" />
         </NuxtLink>
       </div>
