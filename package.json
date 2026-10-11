@@ -13,34 +13,28 @@
   },
   "dependencies": {
     "@catppuccin/daisyui": "^2.1.1",
-    "@nuxt/content": "^3.8.0",
-    "@nuxt/eslint": "^1.10.0",
+    "@nuxt/content": "^3.8.2",
+    "@nuxt/eslint": "^1.11.0",
     "@nuxt/icon": "^2.1.0",
-    "@nuxtjs/color-mode": "3.5.2",
+    "@nuxtjs/color-mode": "^4.0.0",
     "@tailwindcss/vite": "^4.1.17",
     "@vueuse/nuxt": "^14.0.0",
-    "daisyui": "^5.5.0",
+    "daisyui": "^5.5.5",
     "eslint": "^9.39.1",
     "fuse.js": "^7.1.0",
     "nuxt": "^4.2.1",
     "rehype-mathjax": "^7.1.0",
     "remark-math": "^6.0.0",
-    "sharp": "0.33.4",
     "tailwindcss": "^4.1.17",
-    "vue": "^3.5.24",
+    "vue": "^3.5.25",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
-    "@iconify-json/fluent": "^1.2.34",
+    "@iconify-json/fluent": "^1.2.35",
     "@iconify-json/mingcute": "^1.2.5",
     "@iconify-json/twemoji": "^1.2.4",
-    "@nuxt/image": "^1.11.0",
+    "@nuxt/image": "^2.0.0",
     "@tailwindcss/typography": "^0.5.19",
-    "zod": "^4.1.12"
-  },
-  "pnpm": {
-    "overrides": {
-      "sharp": "0.33.4"
-    }
+    "zod": "^4.1.13"
   }
 }
