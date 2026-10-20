@@ -24,7 +24,7 @@
         <NuxtLink to="https://www.linkedin.com/in/yurareru/" target="_blank" alt="LinkedIn">
           <Icon name="mingcute:linkedin-line" size="24" />
         </NuxtLink>
-        <NuxtLink to="mailto:danialananto@pm.com" target="_blank" alt="Email">
+        <NuxtLink to="mailto:danialananto@protonmail.com" target="_blank" alt="Email">
           <Icon name="mingcute:mail-line" size="24" />
         </NuxtLink>
       </div>
