@@ -13,29 +13,29 @@
   },
   "dependencies": {
     "@catppuccin/daisyui": "^2.1.1",
-    "@nuxt/content": "^3.16.1",
+    "@nuxt/content": "^3.17.0",
     "@nuxt/eslint": "^1.17.0",
-    "@nuxt/icon": "^2.5.1",
-    "@nuxtjs/color-mode": "^4.0.1",
-    "@tailwindcss/vite": "^4.3.3",
-    "@vueuse/nuxt": "^14.4.0",
-    "better-sqlite3": "^13.0.3",
-    "daisyui": "^5.7.47",
-    "eslint": "^9.39.5",
+    "@nuxt/icon": "^2.6.3",
+    "@nuxtjs/color-mode": "^4.1.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "@vueuse/nuxt": "^15.0.0",
+    "better-sqlite3": "^13.2.0",
+    "daisyui": "^5.8.2",
+    "eslint": "^10.15.0",
     "fuse.js": "^7.5.0",
-    "nuxt": "^4.6.1",
+    "nuxt": "^4.6.4",
     "rehype-mathjax": "^7.1.0",
     "remark-math": "^6.0.0",
-    "tailwindcss": "^4.3.3",
-    "vue": "^3.5.43",
-    "vue-router": "^4.6.4"
+    "tailwindcss": "^4.3.5",
+    "vue": "^3.5.46",
+    "vue-router": "^5.5.1"
   },
   "devDependencies": {
-    "@iconify-json/fluent": "^1.2.59",
-    "@iconify-json/mingcute": "^1.2.8",
+    "@iconify-json/fluent": "^1.2.62",
+    "@iconify-json/mingcute": "^1.2.10",
     "@iconify-json/twemoji": "^1.2.5",
-    "@nuxt/image": "^2.1.0",
+    "@nuxt/image": "^2.2.1",
     "@tailwindcss/typography": "^0.5.20",
-    "zod": "^4.6.5"
+    "zod": "^4.6.7"
   }
 }
