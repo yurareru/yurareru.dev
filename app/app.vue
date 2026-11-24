@@ -2,8 +2,8 @@
 useSeoMeta({
   title: "Yurareru",
   ogTitle: "Yurareru",
-  description: "Halo, nama saya Danial Al Hasya Ananto, dan ini adalah web pribadi saya.",
-  ogDescription: "Halo, nama saya Danial Al Hasya Ananto, dan ini adalah web pribadi saya.",
+  description: "Halo, nama saya Danial, dan ini adalah web pribadi saya.",
+  ogDescription: "Halo, nama saya Danial, dan ini adalah web pribadi saya.",
 })
 </script>
 <template>
