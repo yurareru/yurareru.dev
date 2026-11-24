@@ -33,8 +33,9 @@ const { copy, copied, isSupported } = useClipboard()
       <slot />
     </pre>
     <div v-if="isSupported" class="absolute right-0 h-full pointer-events-none p-1">
-      <div @click="copy(props.code)" class="sticky top-20 btn btn-circle pointer-events-auto"
-        :class="!copied ? '' : 'btn-success'">
+      <div
+class="sticky top-20 btn btn-circle pointer-events-auto" :class="!copied ? '' : 'btn-success'"
+        @click="copy(props.code)">
         <Icon name="mingcute:clipboard-line" size="24" />
       </div>
     </div>

@@ -3,7 +3,8 @@ import type { NuxtError } from '#app'
 
 const { error } = defineProps({
   error: {
-    type: Object as () => NuxtError
+    type: Object as () => NuxtError,
+    required: true,
   },
 })
 </script>

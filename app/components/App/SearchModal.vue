@@ -52,13 +52,14 @@ onClickOutside(modal, () => emit('close'))
         <label class="input input-ghost bg-transparent outline-none w-full">
           <Icon name="mingcute:search-2-line" size="24" />
           <input ref="queryInput" v-model="query" type="text" placeholder="Cari...">
-          <Icon @click="$emit('close')" name="mingcute:close-line" size="24" class="btn btn-circle btn-ghost" />
+          <Icon name="mingcute:close-line" size="24" class="btn btn-circle btn-ghost" @click="$emit('close')" />
         </label>
       </div>
       <div v-if="result.length" class="overflow-scroll border-t border-secondary mt-4 pt-4">
         <ul>
           <li v-for="r in result" :key="r.item.id">
-            <NuxtLink :to="r.item.id" class="flex mb-4 w-full pr-2"
+            <NuxtLink
+:to="r.item.id" class="flex mb-4 w-full pr-2"
               @click="useRouter().push(r.item.id); $emit('close')">
               <div>
                 <span class="font-bold text-lg">{{ r.item.title }}</span><br>

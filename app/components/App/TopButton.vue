@@ -4,7 +4,8 @@ const router = useRouter()
 </script>
 <template>
   <Transition>
-    <div v-show="y > 100" class="fixed bottom-4 right-4 btn btn-circle btn-xl z-40"
+    <div
+v-show="y > 100" class="fixed bottom-4 right-4 btn btn-circle btn-xl z-40"
       @click="y = 0; router.replace({ hash: '' })">
       <Icon name="mingcute:arrow-up-fill" size="24" />
     </div>

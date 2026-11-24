@@ -6,7 +6,6 @@ if (colorMode.value === 'dark') {
   colorMode.preference = 'latte'
 }
 
-await nextTick()
 const isDark = computed({
   get: () => colorMode.value === 'mocha',
   set: (value) => {
@@ -14,6 +13,7 @@ const isDark = computed({
   }
 })
 defineExpose({ isDark })
+await nextTick()
 
 const checkbox = useTemplateRef('checkbox')
 
@@ -33,7 +33,7 @@ onMounted(() => {
 <template>
   <nav class="navbar sticky top-0 bg-base-100 border-b border-secondary z-50">
     <div class="navbar-start">
-      <NuxtLink to="/" class="btn btn-ghost text-primary" ariaCurrentValue="false">
+      <NuxtLink to="/" class="btn btn-ghost text-primary" aria-current-value="false">
         <Icon name="local:logo" />
       </NuxtLink>
     </div>
@@ -57,13 +57,13 @@ onMounted(() => {
         <Icon name="mingcute:search-2-line" size="24" />
       </div>
       <label class="swap swap-rotate btn btn-circle btn-ghost">
-        <input v-model="isDark" type="checkbox" />
+        <input v-model="isDark" type="checkbox" >
         <Icon name="mingcute:sun-line" class="swap-on" size="24" />
         <Icon name="mingcute:moon-line" class="swap-off" size="24" />
       </label>
       <details class="dropdown dropdown-end lg:hidden">
-        <summary @click="checkbox!.checked = !checkbox!.checked" class="btn btn-circle btn-ghost swap swap-rotate">
-          <input ref="checkbox" type="checkbox" />
+        <summary class="btn btn-circle btn-ghost swap swap-rotate" @click="checkbox!.checked = !checkbox!.checked">
+          <input ref="checkbox" type="checkbox" >
           <Icon name="mingcute:menu-line" size="24" class="swap-off" />
           <Icon name="mingcute:close-line" size="24" class="swap-on" />
         </summary>

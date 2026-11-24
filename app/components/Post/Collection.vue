@@ -15,10 +15,12 @@ const formatDate = (date: string) => {
 </script>
 <template>
   <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-    <div v-for="post in posts" :key="post.path" @click="useRouter().push(post.path)"
-      class="bg-base-200 rounded-xl cursor-pointer flex flex-col h-72 overflow-hidden">
+    <div
+v-for="post in posts" :key="post.path" class="bg-base-200 rounded-xl cursor-pointer flex flex-col h-72 overflow-hidden"
+      @click="useRouter().push(post.path)">
       <NuxtLink :to="post.path" class="h-32 overflow-hidden">
-        <NuxtImg :src="`${post.path}/thumbnail.jpg`" :placeholder="[720, 480, 5, 5]" format="webp"
+        <NuxtImg
+:src="`${post.path}/thumbnail.jpg`" :placeholder="[720, 480, 5, 5]" format="webp"
           class="bg-cover bg-center w-full" />
       </NuxtLink>
       <NuxtLink :to="post.path" class="text-primary text-xl font-bold p-2">{{ post.title }}</NuxtLink>
